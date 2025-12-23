@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     "Blog cá nhân chia sẻ kiến thức về lập trình mạng với Java và JavaScript. Từ cơ bản đến nâng cao, với code examples và kinh nghiệm thực tế.",
   keywords: ["Java", "JavaScript", "Network Programming", "Lập trình mạng", "Blog"],
   authors: [{ name: "Nguyễn Phạm Quốc Huy" }],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     title: "Nguyễn Phạm Quốc Huy - Blog Lập Trình Mạng",
     description: "Blog cá nhân chia sẻ kiến thức về lập trình mạng với Java và JavaScript",
@@ -46,6 +51,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+      </head>
       <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LanguageProvider>

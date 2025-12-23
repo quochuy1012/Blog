@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
+import { getImagePath } from "@/lib/utils"
 import { useEffect, useRef, useState } from "react"
 import { X } from "lucide-react"
 import { ScrollAnimation } from "@/components/scroll-animation"
@@ -135,9 +136,10 @@ export function CertificatesSection() {
               <div className="relative border rounded-2xl p-6 md:p-8 hover:border-accent/50 transition-all duration-500 h-full flex flex-col premium-card hover:scale-105 hover:shadow-2xl hover:shadow-accent/30 transform-3d rotate-y-5 group">
                 <div className="relative mb-4 overflow-hidden rounded-lg h-48 group/image">
                   <img
-                    src={cert.image || "/placeholder.svg"}
+                    src={getImagePath(cert.image || "/placeholder.svg")}
                     alt={cert.title}
                     className="w-full h-full object-cover transform group-hover/image:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer opacity-0 group-hover/image:opacity-100"></div>
                 </div>
@@ -182,9 +184,10 @@ export function CertificatesSection() {
                 <p className="text-muted-foreground mb-4">{selectedCert.issuer} • {selectedCert.date}</p>
                 <div className="relative w-full rounded-lg overflow-hidden border border-border">
                   <img
-                    src={selectedCert.image || "/placeholder.svg"}
+                    src={getImagePath(selectedCert.image || "/placeholder.svg")}
                     alt={selectedCert.title}
                     className="w-full h-auto object-contain max-h-[70vh]"
+                    loading="eager"
                   />
                 </div>
               </div>

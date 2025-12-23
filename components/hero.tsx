@@ -5,6 +5,7 @@ import { Github, Mail, Phone } from "lucide-react"
 import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
 import { ContactPopup } from "@/components/contact-popup"
+import { getImagePath } from "@/lib/utils"
 
 interface HeroProps {
   onGetStarted: () => void
@@ -39,9 +40,10 @@ export default function Hero({ onGetStarted }: HeroProps) {
             <div className="absolute -inset-6 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 rounded-full blur-3xl opacity-40 group-hover:opacity-60 transition-opacity duration-500 animate-pulse"></div>
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl shadow-blue-500/50 group-hover:border-blue-400 group-hover:shadow-blue-400/70 transition-all duration-500">
               <img
-                src="/qhyy(2).jpg"
+                src={getImagePath("/qhyy(2).jpg")}
                 alt={about?.name || "Profile"}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="eager"
               />
             </div>
           </div>

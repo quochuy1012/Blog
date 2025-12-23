@@ -3,6 +3,7 @@
 import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
 import { getAllPosts } from "@/lib/posts"
+import { getImagePath } from "@/lib/utils"
 import { Mail, Phone, Github, GraduationCap, Zap, Target, User, Briefcase, Award, BookOpen } from "lucide-react"
 import { ScrollAnimation } from "@/components/scroll-animation"
 
@@ -116,9 +117,10 @@ export function AboutSection() {
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
                   <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500/30 flex-shrink-0 shadow-lg shadow-blue-500/30 hover:shadow-blue-400/50 hover:border-blue-400/50 transition-all duration-300">
                     <img
-                      src="/qhyy.jpg"
+                      src={getImagePath("/qhyy.jpg")}
                       alt={about?.name || "Profile"}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      loading="eager"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">

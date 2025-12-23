@@ -125,6 +125,21 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Mobile optimizations */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
   }
 
   a {
@@ -512,5 +527,32 @@ html {
   /* Smooth horizontal scroll */
   .scrollbar-hide {
     scroll-behavior: smooth;
+  }
+  
+  /* Mobile responsive improvements */
+  @media (max-width: 768px) {
+    .premium-card {
+      padding: 1rem !important;
+    }
+    
+    /* Ensure images are responsive */
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    /* Better touch targets */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  /* Fix for mobile viewport */
+  @supports (-webkit-touch-callout: none) {
+    .min-h-screen {
+      min-height: -webkit-fill-available;
+    }
   }
 }
