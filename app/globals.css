@@ -9,17 +9,17 @@ html {
 
 :root {
   --background: oklch(0.98 0 0);
-  --foreground: oklch(0.15 0 0);
+  --foreground: oklch(0.1 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0 0);
+  --card-foreground: oklch(0.1 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.1 0 0);
+  --primary: oklch(0.15 0 0);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.93 0 0);
-  --secondary-foreground: oklch(0.2 0 0);
+  --secondary-foreground: oklch(0.15 0 0);
   --muted: oklch(0.88 0 0);
-  --muted-foreground: oklch(0.5 0 0);
+  --muted-foreground: oklch(0.35 0 0);
   --accent: oklch(0.55 0.2 240);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -127,6 +127,26 @@ html {
     @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: oklch(0.1 0 0);
+  }
+  
+  /* Ensure text is always readable */
+  h1, h2, h3, h4, h5, h6 {
+    color: oklch(0.1 0 0);
+    font-weight: 700;
+  }
+  
+  p, span, div, li {
+    color: oklch(0.15 0 0);
+  }
+  
+  /* Dark mode text colors */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: oklch(0.98 0 0);
+  }
+  
+  .dark p, .dark span, .dark div, .dark li {
+    color: oklch(0.9 0 0);
   }
   
   /* Mobile optimizations */
@@ -546,6 +566,78 @@ html {
     button, a {
       min-height: 44px;
       min-width: 44px;
+    }
+    
+    /* Improve text contrast on mobile - Light mode */
+    body {
+      color: oklch(0.08 0 0) !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: oklch(0.05 0 0) !important;
+      font-weight: 800;
+    }
+    
+    p, span, div, li, td, th {
+      color: oklch(0.12 0 0) !important;
+    }
+    
+    /* Override gray colors for better contrast */
+    .text-gray-200, .text-gray-300, .text-gray-400, .text-gray-500 {
+      color: oklch(0.25 0 0) !important;
+    }
+    
+    /* Dark mode mobile */
+    .dark body {
+      color: oklch(0.98 0 0) !important;
+    }
+    
+    .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+      color: oklch(1 0 0) !important;
+    }
+    
+    .dark p, .dark span, .dark div, .dark li {
+      color: oklch(0.95 0 0) !important;
+    }
+    
+    .dark .text-gray-200 {
+      color: oklch(0.95 0 0) !important;
+    }
+    
+    .dark .text-gray-300 {
+      color: oklch(0.9 0 0) !important;
+    }
+    
+    .dark .text-gray-400 {
+      color: oklch(0.8 0 0) !important;
+    }
+    
+    .dark .text-gray-500 {
+      color: oklch(0.7 0 0) !important;
+    }
+    
+    /* Ensure text-foreground class works */
+    .text-foreground {
+      color: oklch(0.08 0 0) !important;
+    }
+    
+    .dark .text-foreground {
+      color: oklch(0.98 0 0) !important;
+    }
+    
+    /* Improve muted text visibility */
+    .text-muted-foreground {
+      color: oklch(0.3 0 0) !important;
+    }
+    
+    .dark .text-muted-foreground {
+      color: oklch(0.75 0 0) !important;
+    }
+    
+    /* Ensure white text is visible on dark backgrounds */
+    .text-white {
+      color: oklch(1 0 0) !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
   }
   

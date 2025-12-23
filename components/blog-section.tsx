@@ -36,7 +36,7 @@ export function BlogSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">{t?.blog?.title || "Blog"}</h2>
-          <p className="text-muted-foreground text-lg">{t?.blog?.subtitle || "Khám phá các bài viết"}</p>
+          <p className="text-muted-foreground text-lg md:text-xl">{t?.blog?.subtitle || "Khám phá các bài viết"}</p>
         </div>
 
         {/* Posts Grid */}
@@ -49,25 +49,25 @@ export function BlogSection() {
               >
                 <article className="relative h-full premium-card rounded-2xl p-6 md:p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2 transform-3d rotate-y-5 group">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-gray-400 dark:text-gray-500 text-sm">
+                  <div className="text-muted-foreground text-sm">
                     {formatDate(post.date)} • {post.readTime} {t?.blog?.readTime || "phút đọc"}
                   </div>
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-bold ${
                       post.series === "java"
-                        ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                        : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                        ? "bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30"
+                        : "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 border border-yellow-500/30"
                     }`}
                   >
                     {post.series === "java" ? (t?.blog?.java || "Java") : (t?.blog?.javascript || "JavaScript")}
                   </span>
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold text-white dark:text-foreground mb-4 group-hover:text-blue-400 transition-colors line-clamp-2">
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
                   {getPostTitle(post)}
                 </h3>
 
-                <p className="text-gray-400 dark:text-muted-foreground text-sm md:text-base mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-muted-foreground text-sm md:text-base mb-6 line-clamp-3 leading-relaxed">
                   {getPostExcerpt(post)}
                 </p>
 
@@ -75,7 +75,7 @@ export function BlogSection() {
                   {post.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs text-gray-500 dark:text-gray-400 hover:text-gray-400 transition-colors"
+                      className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                     >
                       #{tag}
                     </span>
