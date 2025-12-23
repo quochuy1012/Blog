@@ -67,8 +67,8 @@ export function AboutSection() {
           <ScrollAnimation direction="up" delay={0}>
             <div className="premium-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-blue-500/30 border border-slate-700/50 hover:border-blue-400/50">
               <Briefcase className="w-8 h-8 text-blue-400 mx-auto mb-3 group-hover:text-blue-300 transition-colors drop-shadow-[0_0_10px_rgba(59,130,246,0.6)]" />
-              <div className="text-2xl md:text-3xl font-bold text-white mb-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]">{about?.summaryProjectsCount || "10+"}</div>
-              <div className="text-xs md:text-sm text-gray-300 group-hover:text-gray-200 transition-colors">{about?.summaryProjects || "Dự Án"}</div>
+              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1 drop-shadow-[0_0_8px_rgba(59,130,246,0.4)]">{about?.summaryProjectsCount || "10+"}</div>
+              <div className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">{about?.summaryProjects || "Dự Án"}</div>
             </div>
           </ScrollAnimation>
           
@@ -78,8 +78,8 @@ export function AboutSection() {
               className="premium-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-purple-500/30 border border-slate-700/50 hover:border-purple-400/50"
             >
               <Award className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors drop-shadow-[0_0_10px_rgba(168,85,247,0.6)]" />
-              <div className="text-2xl md:text-3xl font-bold text-white mb-1 drop-shadow-[0_0_8px_rgba(168,85,247,0.4)]">{about?.summaryCertificatesCount || "3"}</div>
-              <div className="text-xs md:text-sm text-gray-300 group-hover:text-gray-200 transition-colors">{about?.summaryCertificates || "Chứng Chỉ"}</div>
+              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1 drop-shadow-[0_0_8px_rgba(168,85,247,0.4)]">{about?.summaryCertificatesCount || "3"}</div>
+              <div className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">{about?.summaryCertificates || "Chứng Chỉ"}</div>
             </div>
           </ScrollAnimation>
           
@@ -89,8 +89,8 @@ export function AboutSection() {
               className="premium-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-cyan-500/30 border border-slate-700/50 hover:border-cyan-400/50"
             >
               <GraduationCap className="w-8 h-8 text-cyan-400 mx-auto mb-3 group-hover:text-cyan-300 transition-colors drop-shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
-              <div className="text-2xl md:text-3xl font-bold text-white mb-1 drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]">{about?.summaryUniversityName || "Đại Học"}</div>
-              <div className="text-xs md:text-sm text-gray-300 group-hover:text-gray-200 transition-colors">{about?.summaryUniversity || "Công Nghệ"}</div>
+              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1 drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]">{about?.summaryUniversityName || "Đại Học"}</div>
+              <div className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">{about?.summaryUniversity || "Công Nghệ"}</div>
             </div>
           </ScrollAnimation>
           
@@ -100,8 +100,8 @@ export function AboutSection() {
               className="premium-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-green-500/30 border border-slate-700/50 hover:border-green-400/50"
             >
               <BookOpen className="w-8 h-8 text-green-400 mx-auto mb-3 group-hover:text-green-300 transition-colors drop-shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
-              <div className="text-2xl md:text-3xl font-bold text-white mb-1 drop-shadow-[0_0_8px_rgba(34,197,94,0.4)]">{blogPostsCount}</div>
-              <div className="text-xs md:text-sm text-gray-300 group-hover:text-gray-200 transition-colors">{t?.blog?.title || "Bài viết"}</div>
+              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1 drop-shadow-[0_0_8px_rgba(34,197,94,0.4)]">{blogPostsCount}</div>
+              <div className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">{t?.blog?.title || "Bài viết"}</div>
             </div>
           </ScrollAnimation>
         </div>
@@ -128,10 +128,10 @@ export function AboutSection() {
                       <div className="p-2 rounded-lg bg-blue-500/20 border border-blue-400/30 shadow-md shadow-blue-500/20 hover:shadow-blue-400/40 transition-all duration-300">
                         <User className="w-5 h-5 text-blue-400 drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-white drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">{about?.name || "Nguyễn Phạm Quốc Huy"}</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground drop-shadow-[0_0_10px_rgba(59,130,246,0.4)]">{about?.name || "Nguyễn Phạm Quốc Huy"}</h3>
                     </div>
-                    <p className="text-lg md:text-xl text-blue-400 mb-4 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] font-medium">{about?.role || "BA (Business Analyst)"}</p>
-                    <p className="text-gray-200 leading-relaxed drop-shadow-[0_0_6px_rgba(0,0,0,0.4)]">{about?.description || ""}</p>
+                    <p className="text-lg md:text-xl text-blue-600 dark:text-blue-400 mb-4 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)] font-medium">{about?.role || "BA (Business Analyst)"}</p>
+                    <p className="text-muted-foreground leading-relaxed">{about?.description || ""}</p>
                   </div>
                 </div>
               </div>
