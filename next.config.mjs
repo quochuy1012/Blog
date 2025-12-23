@@ -6,11 +6,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Chỉ dùng static export khi build production
-  // Khi dev, không dùng để tránh lỗi generateStaticParams
-  ...(process.env.NODE_ENV === 'production' && {
-    output: 'export',
-  }),
+  // Luôn dùng static export cho GitHub Pages
+  output: 'export',
   trailingSlash: false,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
