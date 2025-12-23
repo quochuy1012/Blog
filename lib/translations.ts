@@ -87,7 +87,7 @@ export const translations = {
       email: "nguyenphamquochuy1012@gmail.com",
       phone: "0937534572",
       github: "https://github.com/quochuy1012",
-      facebook: "https://facebook.com/quochuy1012",
+      facebook: "https://www.facebook.com/share/16bKQNdx2b/?mibextid=wwXIfr",
     },
     footer: {
       description: "Blog chia sẻ kiến thức lập trình mạng với Java",
@@ -185,7 +185,7 @@ export const translations = {
       email: "nguyenphamquochuy1012@gmail.com",
       phone: "0937534572",
       github: "https://github.com/quochuy1012",
-      facebook: "https://facebook.com/quochuy1012",
+      facebook: "https://www.facebook.com/share/16bKQNdx2b/?mibextid=wwXIfr",
     },
     footer: {
       description: "Blog sharing knowledge about network programming with Java",
