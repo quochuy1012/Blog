@@ -43,7 +43,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen bg-gradient-to-b from-background via-slate-50 dark:via-slate-900 to-background py-20 md:py-32 px-6 md:px-8 lg:px-12 overflow-hidden scroll-mt-20"
+      className="relative min-h-screen bg-gradient-to-b from-background via-background to-background py-20 md:py-32 px-6 md:px-8 lg:px-12 overflow-hidden scroll-mt-20"
     >
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
