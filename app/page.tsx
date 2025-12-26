@@ -4,6 +4,7 @@ import Navigation from "@/components/navigation"
 import Hero from "@/components/hero"
 import Footer from "@/components/footer"
 import { AboutSection } from "@/components/about-section"
+import { ProjectsSection } from "@/components/projects-section"
 import { BlogSection } from "@/components/blog-section"
 import { CertificatesSection } from "@/components/certificates-section"
 import { InteractiveParticles } from "@/components/interactive-particles"
@@ -19,6 +20,7 @@ export default function Home() {
       <Navigation />
       <Hero onGetStarted={() => {}} />
       <AboutSection />
+      <ProjectsSection />
       <BlogSection />
       <CertificatesSection />
       <Footer />

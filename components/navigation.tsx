@@ -20,6 +20,7 @@ export default function Navigation() {
   const menuItems = [
     { href: "/", label: t?.nav?.home || "Trang chủ" },
     { href: "/#about", label: t?.nav?.about || "Về tôi" },
+    { href: "/#projects", label: t?.nav?.projects || "Dự án" },
     { href: "/#blog", label: t?.nav?.blog || "Blog" },
     { href: "/#certificates", label: t?.nav?.certificates || "Chứng chỉ" },
   ]

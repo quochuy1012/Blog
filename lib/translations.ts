@@ -5,6 +5,7 @@ export const translations = {
       home: "Trang chủ",
       about: "Về tôi",
       blog: "Blog",
+      projects: "Dự án",
       certificates: "Chứng chỉ",
       javaBas: "Cơ Bản Java",
       socket: "Socket",
@@ -89,6 +90,13 @@ export const translations = {
       github: "https://github.com/quochuy1012",
       facebook: "https://www.facebook.com/share/16bKQNdx2b/?mibextid=wwXIfr",
     },
+    projects: {
+      title: "Dự Án Gần Đây",
+      subtitle: "Những dự án mới nhất mà tôi đã phát triển",
+      viewOnGithub: "Xem trên GitHub",
+      technologies: "Công nghệ sử dụng",
+      watchDemo: "Xem video demo",
+    },
     footer: {
       description: "Blog chia sẻ kiến thức lập trình mạng với Java",
       links: "Liên kết",
@@ -103,6 +111,7 @@ export const translations = {
       home: "Home",
       about: "About",
       blog: "Blog",
+      projects: "Projects",
       certificates: "Certificates",
       javaBas: "Java Basics",
       socket: "Socket",
@@ -186,6 +195,13 @@ export const translations = {
       phone: "0937534572",
       github: "https://github.com/quochuy1012",
       facebook: "https://www.facebook.com/share/16bKQNdx2b/?mibextid=wwXIfr",
+    },
+    projects: {
+      title: "Recent Projects",
+      subtitle: "Latest projects I have developed",
+      viewOnGithub: "View on GitHub",
+      technologies: "Technologies Used",
+      watchDemo: "Watch demo video",
     },
     footer: {
       description: "Blog sharing knowledge about network programming with Java",
