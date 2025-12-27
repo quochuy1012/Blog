@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button"
 
 function BlogContent() {
   const searchParams = useSearchParams()
-  const series = searchParams.get("series") as "java" | "javascript" | null
+  const series = searchParams.get("series") as "java" | "javascript" | "sql" | "python" | "csharp" | "entertainment" | null
   const { language, mounted } = useLanguage()
 
   if (!mounted) return null
@@ -124,6 +124,50 @@ function BlogContent() {
               {series === "javascript" && <span className="inline-block w-2 h-2 bg-white rounded-full mr-2"></span>}
               {t?.blog?.javascript || "JavaScript"}
             </Link>
+            <Link
+              href="/blog?series=sql"
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                series === "sql"
+                  ? "bg-green-500 text-white border-2 border-green-400"
+                  : "bg-slate-800/50 text-gray-300 border border-slate-700 hover:bg-slate-800 hover:border-slate-600"
+              }`}
+            >
+              {series === "sql" && <span className="inline-block w-2 h-2 bg-white rounded-full mr-2"></span>}
+              {t?.blog?.sql || "SQL"}
+            </Link>
+            <Link
+              href="/blog?series=python"
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                series === "python"
+                  ? "bg-cyan-500 text-white border-2 border-cyan-400"
+                  : "bg-slate-800/50 text-gray-300 border border-slate-700 hover:bg-slate-800 hover:border-slate-600"
+              }`}
+            >
+              {series === "python" && <span className="inline-block w-2 h-2 bg-white rounded-full mr-2"></span>}
+              {t?.blog?.python || "Python"}
+            </Link>
+            <Link
+              href="/blog?series=csharp"
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                series === "csharp"
+                  ? "bg-purple-500 text-white border-2 border-purple-400"
+                  : "bg-slate-800/50 text-gray-300 border border-slate-700 hover:bg-slate-800 hover:border-slate-600"
+              }`}
+            >
+              {series === "csharp" && <span className="inline-block w-2 h-2 bg-white rounded-full mr-2"></span>}
+              {t?.blog?.csharp || "C#"}
+            </Link>
+            <Link
+              href="/blog?series=entertainment"
+              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                series === "entertainment"
+                  ? "bg-pink-500 text-white border-2 border-pink-400"
+                  : "bg-slate-800/50 text-gray-300 border border-slate-700 hover:bg-slate-800 hover:border-slate-600"
+              }`}
+            >
+              {series === "entertainment" && <span className="inline-block w-2 h-2 bg-white rounded-full mr-2"></span>}
+              {t?.blog?.entertainment || "Giải trí"}
+            </Link>
           </div>
 
           {/* Posts Grid */}
@@ -145,10 +189,28 @@ function BlogContent() {
                       className={`px-3 py-1 rounded-full text-xs font-bold ${
                         post.series === "java"
                           ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                          : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                          : post.series === "javascript"
+                          ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                          : post.series === "sql"
+                          ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                          : post.series === "python"
+                          ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
+                          : post.series === "csharp"
+                          ? "bg-purple-500/20 text-purple-400 border border-purple-500/30"
+                          : "bg-pink-500/20 text-pink-400 border border-pink-500/30"
                       }`}
                     >
-                      {post.series === "java" ? (t?.blog?.java || "Java") : (t?.blog?.javascript || "JavaScript")}
+                      {post.series === "java"
+                        ? (t?.blog?.java || "Java")
+                        : post.series === "javascript"
+                        ? (t?.blog?.javascript || "JavaScript")
+                        : post.series === "sql"
+                        ? (t?.blog?.sql || "SQL")
+                        : post.series === "python"
+                        ? (t?.blog?.python || "Python")
+                        : post.series === "csharp"
+                        ? (t?.blog?.csharp || "C#")
+                        : (t?.blog?.entertainment || "Giải trí")}
                     </span>
                   </div>
 

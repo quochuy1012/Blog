@@ -4,7 +4,7 @@ import { useLanguage } from "@/hooks/use-language"
 import { translations } from "@/lib/translations"
 import { getAllPosts } from "@/lib/posts"
 import { getImagePath } from "@/lib/utils"
-import { Mail, Phone, Github, GraduationCap, Zap, Target, User, Briefcase, Award, BookOpen } from "lucide-react"
+import { Mail, Phone, Github, GraduationCap, Zap, Target, User, Award, BookOpen, Heart, Film, Music, Plane } from "lucide-react"
 import { ScrollAnimation } from "@/components/scroll-animation"
 
 export function AboutSection() {
@@ -63,16 +63,8 @@ export function AboutSection() {
         </div>
 
         {/* Stats Cards - Clickable */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
           <ScrollAnimation direction="up" delay={0}>
-            <div className="bg-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-blue-500/30 border border-border hover:border-blue-400/50">
-              <Briefcase className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-3 group-hover:text-blue-500 dark:group-hover:text-blue-300 transition-colors" />
-              <div className="text-2xl md:text-3xl font-bold text-foreground mb-1">{about?.summaryProjectsCount || "10+"}</div>
-              <div className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors">{about?.summaryProjects || "Dự Án"}</div>
-            </div>
-          </ScrollAnimation>
-          
-          <ScrollAnimation direction="up" delay={100}>
             <div 
               onClick={handleScrollToCertificates}
               className="bg-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-purple-500/30 border border-border hover:border-purple-400/50"
@@ -83,7 +75,7 @@ export function AboutSection() {
             </div>
           </ScrollAnimation>
           
-          <ScrollAnimation direction="up" delay={200}>
+          <ScrollAnimation direction="up" delay={100}>
             <div 
               onClick={handleScrollToEducation}
               className="bg-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-cyan-500/30 border border-border hover:border-cyan-400/50"
@@ -94,7 +86,7 @@ export function AboutSection() {
             </div>
           </ScrollAnimation>
           
-          <ScrollAnimation direction="up" delay={300}>
+          <ScrollAnimation direction="up" delay={200}>
             <div 
               onClick={handleScrollToBlog}
               className="bg-card rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-green-500/30 border border-border hover:border-green-400/50"
@@ -175,35 +167,99 @@ export function AboutSection() {
             </div>
           </ScrollAnimation>
 
-          {/* Education & Contact Grid */}
+          {/* Education, Contact & Hobbies Grid */}
           <div className="grid md:grid-cols-2 gap-6">
-            {/* Education */}
-            <ScrollAnimation direction="up" delay={200}>
-              <div id="education" className="bg-card rounded-2xl p-8 md:p-10 relative overflow-hidden group border border-border shadow-lg">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="p-3 rounded-lg bg-purple-500/20 border border-purple-400/30 shadow-md shadow-purple-500/20 hover:shadow-purple-400/40 transition-all duration-300">
-                      <GraduationCap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+            {/* Education Column */}
+            <div className="space-y-6">
+              <ScrollAnimation direction="up" delay={200}>
+                <div id="education" className="bg-card rounded-2xl p-8 md:p-10 relative overflow-hidden group border border-border shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="p-3 rounded-lg bg-purple-500/20 border border-purple-400/30 shadow-md shadow-purple-500/20 hover:shadow-purple-400/40 transition-all duration-300">
+                        <GraduationCap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">{t?.about?.education || "Học Vấn"}</h3>
                     </div>
-                    <h3 className="text-2xl font-bold text-purple-600 dark:text-purple-400">{t?.about?.education || "Học Vấn"}</h3>
-                  </div>
-                  <div className="space-y-4">
-                    <p className="font-semibold text-lg text-foreground">{about?.educationUniversity || ""}</p>
-                    <div className="pl-4 border-l-2 border-purple-400/50 dark:border-purple-400/30 space-y-2">
-                      <p className="text-foreground">
-                        <span className="font-medium">{about?.educationMajor || ""}:</span> {about?.educationMajorValue || ""}
-                      </p>
-                      <p className="text-foreground">
-                        <span className="font-medium">{about?.educationSpecialization || ""}:</span> {about?.educationSpecializationValue || ""}
-                      </p>
+                    <div className="space-y-4">
+                      <p className="font-semibold text-lg text-foreground">{about?.educationUniversity || ""}</p>
+                      <div className="pl-4 border-l-2 border-purple-400/50 dark:border-purple-400/30 space-y-2">
+                        <p className="text-foreground">
+                          <span className="font-medium">{about?.educationMajor || ""}:</span> {about?.educationMajorValue || ""}
+                        </p>
+                        <p className="text-foreground">
+                          <span className="font-medium">{about?.educationSpecialization || ""}:</span> {about?.educationSpecializationValue || ""}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
 
-            {/* Contact */}
+              {/* Hobbies - Compact */}
+              <ScrollAnimation direction="up" delay={250}>
+                <div className="bg-card rounded-2xl p-6 relative overflow-hidden group border border-border shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 via-transparent to-rose-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 rounded-lg bg-pink-500/20 border border-pink-400/30 shadow-md shadow-pink-500/20 hover:shadow-pink-400/40 transition-all duration-300">
+                        <Heart className="w-5 h-5 text-pink-600 dark:text-pink-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-pink-600 dark:text-pink-400">{t?.about?.hobbies || "Sở thích"}</h3>
+                    </div>
+                    <ul className="space-y-2">
+                      {about?.hobbiesList?.watchingMovies && (
+                        <li>
+                          <a 
+                            href={about.hobbiesList.watchingMovies.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 p-2 rounded-lg bg-muted hover:bg-muted/80 transition-all border border-border hover:border-pink-400/50 group/item no-underline"
+                          >
+                            <Film size={16} className="text-pink-600 dark:text-pink-400" />
+                            <span className="text-foreground group-hover/item:text-pink-600 dark:group-hover/item:text-pink-400 transition-colors text-sm">
+                              {about.hobbiesList.watchingMovies.title}
+                            </span>
+                          </a>
+                        </li>
+                      )}
+                      {about?.hobbiesList?.listeningMusic && (
+                        <li>
+                          <a 
+                            href={about.hobbiesList.listeningMusic.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 p-2 rounded-lg bg-muted hover:bg-muted/80 transition-all border border-border hover:border-pink-400/50 group/item no-underline"
+                          >
+                            <Music size={16} className="text-pink-600 dark:text-pink-400" />
+                            <span className="text-foreground group-hover/item:text-pink-600 dark:group-hover/item:text-pink-400 transition-colors text-sm">
+                              {about.hobbiesList.listeningMusic.title}
+                            </span>
+                          </a>
+                        </li>
+                      )}
+                      {about?.hobbiesList?.traveling && (
+                        <li>
+                          <a 
+                            href={about.hobbiesList.traveling.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 p-2 rounded-lg bg-muted hover:bg-muted/80 transition-all border border-border hover:border-pink-400/50 group/item no-underline"
+                          >
+                            <Plane size={16} className="text-pink-600 dark:text-pink-400" />
+                            <span className="text-foreground group-hover/item:text-pink-600 dark:group-hover/item:text-pink-400 transition-colors text-sm">
+                              {about.hobbiesList.traveling.title}
+                            </span>
+                          </a>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              </ScrollAnimation>
+            </div>
+
+            {/* Contact Column */}
             <ScrollAnimation direction="up" delay={300}>
               <div className="bg-card rounded-2xl p-8 md:p-10 relative overflow-hidden group border border-border shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -262,6 +318,21 @@ export function AboutSection() {
                         </svg>
                         <span className="text-foreground group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors text-sm">
                           Nguyễn Phạm Quốc Huy
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a 
+                        href={about?.instagram || "#"} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 p-3 rounded-lg bg-muted hover:bg-muted/80 transition-all border border-border hover:border-pink-400/50 group/item no-underline"
+                      >
+                        <svg className="w-5 h-5 text-pink-600 dark:text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        <span className="text-foreground group-hover/item:text-pink-600 dark:group-hover/item:text-pink-400 transition-colors text-sm">
+                          @qqoc.hy_
                         </span>
                       </a>
                     </li>

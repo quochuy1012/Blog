@@ -12,3 +12,11 @@ export function getImagePath(path: string): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`
   return `${basePath}${cleanPath}`
 }
+
+// Helper function to get video/media path with basePath support
+export function getMediaPath(path: string): string {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  // Remove leading slash if basePath already has it
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  return `${basePath}${cleanPath}`
+}

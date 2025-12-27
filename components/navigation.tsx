@@ -23,6 +23,7 @@ export default function Navigation() {
     { href: "/#projects", label: t?.nav?.projects || "Dự án" },
     { href: "/#blog", label: t?.nav?.blog || "Blog" },
     { href: "/#certificates", label: t?.nav?.certificates || "Chứng chỉ" },
+    { href: "/#contact", label: t?.nav?.contact || "Liên hệ" },
   ]
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -82,11 +83,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  isActive(item.href)
-                    ? "bg-accent text-accent-foreground shadow-lg shadow-accent/50"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent/10"
-                }`}
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-muted-foreground hover:text-foreground hover:bg-accent/10"
               >
                 {item.label}
               </Link>

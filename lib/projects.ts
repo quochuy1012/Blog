@@ -4,27 +4,47 @@ export type Project = {
   titleEn: string
   description: string
   descriptionEn: string
+  demoUrl?: string
   videoUrl?: string
   imageUrl?: string
   githubUrl: string
   languages: string[]
   date: string
+  category?: string
+  categoryEn?: string
 }
 
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Hệ thống Quản lý Blog",
-    titleEn: "Blog Management System",
-    description: "Hệ thống quản lý blog với đầy đủ tính năng CRUD, authentication, và markdown editor.",
-    descriptionEn: "Blog management system with full CRUD features, authentication, and markdown editor.",
+    title: "Ứng dụng tìm trọ",
+    titleEn: "Room Finding Application",
+    description: "Giải quyết vấn đề tìm phòng trọ, giúp người dùng tìm phòng ở gần mình và giá tốt, cải thiện nhu cầu nơi ở.",
+    descriptionEn: "Solve the problem of finding boarding rooms, help users find rooms near them and at good prices, improve housing needs.",
+    demoUrl: "",
     videoUrl: "",
-    imageUrl: "",
-    githubUrl: "https://github.com/quochuy1012/Blog",
-    languages: ["Next.js", "TypeScript", "Tailwind CSS"],
+    imageUrl: "/hinhapp.jpg",
+    githubUrl: "https://github.com/quochuy1012/app_tim_tro.git",
+    languages: ["Flutter", "Firebase", "Dart"],
     date: "2024-12-01",
+    category: "Mobile App",
+    categoryEn: "Mobile App",
   },
-  // Thêm các dự án khác ở đây khi cần
+  {
+    id: "2",
+    title: "Website quản lý thư viện",
+    titleEn: "Library Management Website",
+    description: "Hệ thống quản lý thư viện được xây dựng bằng ASP.NET Core, hỗ trợ quản lý sách, độc giả, mượn trả sách một cách hiệu quả.",
+    descriptionEn: "Library management system built with ASP.NET Core, supporting efficient book, reader, and loan management.",
+    demoUrl: "",
+    videoUrl: "",
+    imageUrl: "/thuvien.jpg",
+    githubUrl: "",
+    languages: ["ASP.NET Core", "C#", "SQL Server"],
+    date: "2024-11-15",
+    category: "Web Application",
+    categoryEn: "Web Application",
+  },
 ]
 
 export function getAllProjects(): Project[] {

@@ -7,6 +7,7 @@ export const translations = {
       blog: "Blog",
       projects: "Dự án",
       certificates: "Chứng chỉ",
+      contact: "Liên hệ",
       javaBas: "Cơ Bản Java",
       socket: "Socket",
       http: "HTTP",
@@ -45,10 +46,14 @@ export const translations = {
     },
     blog: {
       title: "Blog",
-      subtitle: "Khám phá các bài viết về lập trình mạng với Java",
+      subtitle: "Chia sẻ kiến thức",
       readTime: "phút đọc",
       java: "Java",
       javascript: "JavaScript",
+      sql: "SQL",
+      python: "Python",
+      csharp: "C#",
+      entertainment: "Giải trí",
       all: "Tất cả",
     },
     about: {
@@ -89,10 +94,26 @@ export const translations = {
       phone: "0937534572",
       github: "https://github.com/quochuy1012",
       facebook: "https://www.facebook.com/share/16bKQNdx2b/?mibextid=wwXIfr",
+      instagram: "https://www.instagram.com/qqoc.hy_/",
+      hobbies: "Sở thích",
+      hobbiesList: {
+        watchingMovies: {
+          title: "Xem phim",
+          url: "https://cellphones.com.vn/sforum/phim-hoc-duong-viet-nam"
+        },
+        listeningMusic: {
+          title: "Nghe nhạc",
+          url: "https://www.youtube.com/watch?v=mnhVOMaBjws&list=PL7QN7ZSwbt3L7p7puSe1SAqRs4Ph5yeC4&index=2"
+        },
+        traveling: {
+          title: "Du lịch",
+          url: "https://duhocinec.com/tong-quan-ve-dat-nuoc-thuy-si/"
+        }
+      }
     },
     projects: {
-      title: "Dự Án Gần Đây",
-      subtitle: "Những dự án mới nhất mà tôi đã phát triển",
+      title: "Dự Án",
+      subtitle: "Dự án mà tôi làm gần đây",
       viewOnGithub: "Xem trên GitHub",
       technologies: "Công nghệ sử dụng",
       watchDemo: "Xem video demo",
@@ -104,6 +125,24 @@ export const translations = {
       email: "Email",
       social: "Mạng xã hội",
     },
+    contact: {
+      title: "Liên Hệ",
+      subtitle: "Hãy gửi tin nhắn cho tôi nếu bạn có bất kỳ câu hỏi nào",
+      name: "Họ và tên",
+      namePlaceholder: "Nhập họ và tên của bạn",
+      email: "Email",
+      emailPlaceholder: "Nhập email của bạn",
+      subject: "Chủ đề",
+      subjectPlaceholder: "Nhập chủ đề",
+      message: "Tin nhắn",
+      messagePlaceholder: "Nhập tin nhắn của bạn...",
+      sendButton: "Gửi tin nhắn",
+      sending: "Đang gửi...",
+      success: "Tin nhắn đã được gửi thành công!",
+      error: "Có lỗi xảy ra, vui lòng thử lại.",
+      contactInfo: "Thông tin liên hệ",
+      getInTouch: "Liên hệ với tôi",
+    },
   },
   en: {
     nav: {
@@ -113,6 +152,7 @@ export const translations = {
       blog: "Blog",
       projects: "Projects",
       certificates: "Certificates",
+      contact: "Contact",
       javaBas: "Java Basics",
       socket: "Socket",
       http: "HTTP",
@@ -151,10 +191,14 @@ export const translations = {
     },
     blog: {
       title: "Blog",
-      subtitle: "Explore articles about network programming with Java",
+      subtitle: "Share knowledge",
       readTime: "min read",
       java: "Java",
       javascript: "JavaScript",
+      sql: "SQL",
+      python: "Python",
+      csharp: "C#",
+      entertainment: "Entertainment",
       all: "All",
     },
     about: {
@@ -195,10 +239,26 @@ export const translations = {
       phone: "0937534572",
       github: "https://github.com/quochuy1012",
       facebook: "https://www.facebook.com/share/16bKQNdx2b/?mibextid=wwXIfr",
+      instagram: "https://www.instagram.com/qqoc.hy_/",
+      hobbies: "Hobbies",
+      hobbiesList: {
+        watchingMovies: {
+          title: "Watching Movies",
+          url: "https://cellphones.com.vn/sforum/phim-hoc-duong-viet-nam"
+        },
+        listeningMusic: {
+          title: "Listening to Music",
+          url: "https://www.youtube.com/watch?v=mnhVOMaBjws&list=PL7QN7ZSwbt3L7p7puSe1SAqRs4Ph5yeC4&index=2"
+        },
+        traveling: {
+          title: "Traveling",
+          url: "https://duhocinec.com/tong-quan-ve-dat-nuoc-thuy-si/"
+        }
+      }
     },
     projects: {
-      title: "Recent Projects",
-      subtitle: "Latest projects I have developed",
+      title: "Projects",
+      subtitle: "Recent projects I have worked on",
       viewOnGithub: "View on GitHub",
       technologies: "Technologies Used",
       watchDemo: "Watch demo video",
@@ -209,6 +269,24 @@ export const translations = {
       contact: "Contact",
       email: "Email",
       social: "Social Media",
+    },
+    contact: {
+      title: "Contact",
+      subtitle: "Feel free to send me a message if you have any questions",
+      name: "Full Name",
+      namePlaceholder: "Enter your full name",
+      email: "Email",
+      emailPlaceholder: "Enter your email",
+      subject: "Subject",
+      subjectPlaceholder: "Enter subject",
+      message: "Message",
+      messagePlaceholder: "Enter your message...",
+      sendButton: "Send Message",
+      sending: "Sending...",
+      success: "Message sent successfully!",
+      error: "An error occurred, please try again.",
+      contactInfo: "Contact Information",
+      getInTouch: "Get in Touch",
     },
   },
 }

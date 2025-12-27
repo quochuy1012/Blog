@@ -3,7 +3,7 @@ export type Post = {
   title: string
   titleEn: string
   slug: string
-  series: "java" | "javascript"
+  series: "java" | "javascript" | "sql" | "python" | "csharp" | "entertainment"
   date: string
   readTime: number
   excerpt: string
@@ -2229,18 +2229,475 @@ app.use('/api/', limiter);
 - Error handling middleware must have 4 parameters`,
     tags: ["JavaScript", "Node.js", "Express", "Middleware"],
   },
+  // SQL Series
+  {
+    id: "sql-1",
+    title: "Giới thiệu về SQL và Database",
+    titleEn: "Introduction to SQL and Database",
+    slug: "gioi-thieu-sql-database",
+    series: "sql",
+    date: "2024-12-01",
+    readTime: 8,
+    excerpt: "Tìm hiểu về SQL, hệ quản trị cơ sở dữ liệu và các khái niệm cơ bản trong database.",
+    excerptEn: "Learn about SQL, database management systems and basic concepts in databases.",
+    content: `# Giới thiệu về SQL và Database
+
+SQL (Structured Query Language) là ngôn ngữ lập trình được sử dụng để quản lý và thao tác với cơ sở dữ liệu quan hệ (Relational Database).
+
+## Cơ sở dữ liệu là gì?
+
+Cơ sở dữ liệu (Database) là một hệ thống lưu trữ dữ liệu có cấu trúc, được tổ chức và quản lý một cách có hệ thống.
+
+## Các loại Database
+
+1. **Relational Database (RDBMS)**: MySQL, PostgreSQL, SQL Server
+2. **NoSQL Database**: MongoDB, Cassandra, Redis
+
+## Các lệnh SQL cơ bản
+
+- SELECT: Truy vấn dữ liệu
+- INSERT: Thêm dữ liệu mới
+- UPDATE: Cập nhật dữ liệu
+- DELETE: Xóa dữ liệu`,
+    contentEn: `# Introduction to SQL and Database
+
+SQL (Structured Query Language) is a programming language used to manage and manipulate relational databases.
+
+## What is a Database?
+
+A database is a structured data storage system, organized and managed systematically.
+
+## Types of Databases
+
+1. **Relational Database (RDBMS)**: MySQL, PostgreSQL, SQL Server
+2. **NoSQL Database**: MongoDB, Cassandra, Redis
+
+## Basic SQL Commands
+
+- SELECT: Query data
+- INSERT: Add new data
+- UPDATE: Update data
+- DELETE: Delete data`,
+    tags: ["SQL", "Database", "MySQL", "PostgreSQL"],
+  },
+  // Python Series
+  {
+    id: "python-1",
+    title: "Python cơ bản cho người mới bắt đầu",
+    titleEn: "Python Basics for Beginners",
+    slug: "python-co-ban-nguoi-moi",
+    series: "python",
+    date: "2024-12-02",
+    readTime: 10,
+    excerpt: "Khám phá Python - ngôn ngữ lập trình phổ biến và dễ học cho người mới bắt đầu.",
+    excerptEn: "Discover Python - a popular and easy-to-learn programming language for beginners.",
+    content: `# Python cơ bản cho người mới bắt đầu
+
+Python là một ngôn ngữ lập trình cấp cao, dễ đọc và dễ học, được sử dụng rộng rãi trong nhiều lĩnh vực.
+
+## Tại sao nên học Python?
+
+1. **Cú pháp đơn giản**: Dễ đọc, dễ hiểu
+2. **Đa năng**: Web development, Data Science, AI/ML, Automation
+3. **Cộng đồng lớn**: Nhiều thư viện và tài liệu
+
+## Cài đặt Python
+
+\`\`\`bash
+# Kiểm tra phiên bản Python
+python --version
+
+# Hoặc
+python3 --version
+\`\`\`
+
+## Biến và kiểu dữ liệu
+
+\`\`\`python
+# Khai báo biến
+name = "Python"
+age = 30
+price = 99.99
+is_active = True
+
+# In ra màn hình
+print(f"Hello {name}!")
+\`\`\`
+
+## Cấu trúc điều khiển
+
+\`\`\`python
+# If statement
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+# Loop
+for i in range(5):
+    print(i)
+\`\`\``,
+    contentEn: `# Python Basics for Beginners
+
+Python is a high-level, readable and easy-to-learn programming language, widely used in many fields.
+
+## Why Learn Python?
+
+1. **Simple syntax**: Easy to read and understand
+2. **Versatile**: Web development, Data Science, AI/ML, Automation
+3. **Large community**: Many libraries and documentation
+
+## Installing Python
+
+\`\`\`bash
+# Check Python version
+python --version
+
+# Or
+python3 --version
+\`\`\`
+
+## Variables and Data Types
+
+\`\`\`python
+# Declare variables
+name = "Python"
+age = 30
+price = 99.99
+is_active = True
+
+# Print to screen
+print(f"Hello {name}!")
+\`\`\`
+
+## Control Structures
+
+\`\`\`python
+# If statement
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+# Loop
+for i in range(5):
+    print(i)
+\`\`\``,
+    tags: ["Python", "Programming", "Beginner"],
+  },
+  // C# Series
+  {
+    id: "csharp-1",
+    title: "Lập trình C# cơ bản",
+    titleEn: "C# Programming Basics",
+    slug: "lap-trinh-csharp-co-ban",
+    series: "csharp",
+    date: "2024-12-03",
+    readTime: 12,
+    excerpt: "Học lập trình C# từ cơ bản, tạo ứng dụng desktop và web với .NET Framework.",
+    excerptEn: "Learn C# programming from basics, create desktop and web applications with .NET Framework.",
+    content: `# Lập trình C# cơ bản
+
+C# (C Sharp) là ngôn ngữ lập trình hướng đối tượng mạnh mẽ do Microsoft phát triển, được sử dụng để xây dựng ứng dụng Windows, Web, và Mobile.
+
+## Giới thiệu về C#
+
+C# là ngôn ngữ:
+- **Type-safe**: Kiểu dữ liệu được kiểm tra chặt chẽ
+- **Object-oriented**: Hỗ trợ đầy đủ OOP
+- **Modern**: Syntax hiện đại và dễ đọc
+
+## Cài đặt .NET SDK
+
+\`\`\`bash
+# Kiểm tra phiên bản .NET
+dotnet --version
+
+# Tạo project mới
+dotnet new console -n MyApp
+\`\`\`
+
+## Cấu trúc chương trình C#
+
+\`\`\`csharp
+using System;
+
+namespace MyApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, C#!");
+            
+            string name = "C#";
+            int age = 25;
+            
+            Console.WriteLine($"Name: {name}, Age: {age}");
+        }
+    }
+}
+\`\`\`
+
+## Classes và Objects
+
+\`\`\`csharp
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    
+    public void Introduce()
+    {
+        Console.WriteLine($"I'm {Name}, {Age} years old");
+    }
+}
+
+// Sử dụng
+var person = new Person { Name = "John", Age = 30 };
+person.Introduce();
+\`\`\``,
+    contentEn: `# C# Programming Basics
+
+C# (C Sharp) is a powerful object-oriented programming language developed by Microsoft, used to build Windows, Web, and Mobile applications.
+
+## Introduction to C#
+
+C# is a:
+- **Type-safe**: Data types are strictly checked
+- **Object-oriented**: Full OOP support
+- **Modern**: Modern and readable syntax
+
+## Installing .NET SDK
+
+\`\`\`bash
+# Check .NET version
+dotnet --version
+
+# Create new project
+dotnet new console -n MyApp
+\`\`\`
+
+## C# Program Structure
+
+\`\`\`csharp
+using System;
+
+namespace MyApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, C#!");
+            
+            string name = "C#";
+            int age = 25;
+            
+            Console.WriteLine($"Name: {name}, Age: {age}");
+        }
+    }
+}
+\`\`\`
+
+## Classes and Objects
+
+\`\`\`csharp
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    
+    public void Introduce()
+    {
+        Console.WriteLine($"I'm {Name}, {Age} years old");
+    }
+}
+
+// Usage
+var person = new Person { Name = "John", Age = 30 };
+person.Introduce();
+\`\`\``,
+    tags: ["C#", ".NET", "Programming", "OOP"],
+  },
+  // Entertainment Series
+  {
+    id: "entertainment-1",
+    title: "10 thư viện JavaScript thú vị nhất cho lập trình viên",
+    titleEn: "10 Most Interesting JavaScript Libraries for Developers",
+    slug: "10-thu-vien-javascript-thu-vi",
+    series: "entertainment",
+    date: "2024-12-04",
+    readTime: 8,
+    excerpt: "Khám phá những thư viện JavaScript thú vị và hữu ích giúp công việc lập trình trở nên thú vị hơn.",
+    excerptEn: "Discover interesting and useful JavaScript libraries that make programming more fun.",
+    content: `# 10 thư viện JavaScript thú vị nhất cho lập trình viên
+
+JavaScript là một ngôn ngữ lập trình vô cùng linh hoạt với hệ sinh thái thư viện phong phú. Dưới đây là những thư viện thú vị giúp bạn giải trí và học hỏi trong quá trình code.
+
+## 1. Three.js - 3D Graphics
+
+Three.js là thư viện mạnh mẽ để tạo đồ họa 3D trong trình duyệt.
+
+\`\`\`javascript
+import * as THREE from 'three';
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+\`\`\`
+
+## 2. Anime.js - Animation Library
+
+Tạo các animation mượt mà và đẹp mắt với Anime.js.
+
+\`\`\`javascript
+anime({
+  targets: '.element',
+  translateX: 250,
+  rotate: '1turn',
+  duration: 2000
+});
+\`\`\`
+
+## 3. Chart.js - Data Visualization
+
+Vẽ biểu đồ đẹp mắt với Chart.js một cách dễ dàng.
+
+\`\`\`javascript
+const ctx = document.getElementById('myChart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3]
+    }]
+  }
+});
+\`\`\`
+
+## 4. Particles.js - Particle Effects
+
+Tạo hiệu ứng particle đẹp mắt cho website.
+
+## 5. AOS (Animate On Scroll)
+
+Thêm animation khi scroll trang một cách đơn giản.
+
+## 6. GSAP (GreenSock Animation Platform)
+
+Thư viện animation chuyên nghiệp với hiệu suất cao.
+
+## 7. D3.js - Data-Driven Documents
+
+Thư viện mạnh mẽ để tạo visualization dữ liệu phức tạp.
+
+## 8. Moment.js / Day.js - Date Manipulation
+
+Xử lý và format ngày tháng dễ dàng.
+
+## 9. Lodash - Utility Library
+
+Bộ công cụ JavaScript với nhiều hàm tiện ích.
+
+## 10. Axios - HTTP Client
+
+Thư viện HTTP client phổ biến và dễ sử dụng.
+
+Hãy khám phá và thử nghiệm những thư viện này để làm cho dự án của bạn thú vị hơn!`,
+    contentEn: `# 10 Most Interesting JavaScript Libraries for Developers
+
+JavaScript is an incredibly flexible programming language with a rich library ecosystem. Here are interesting libraries that help you have fun and learn during coding.
+
+## 1. Three.js - 3D Graphics
+
+Three.js is a powerful library for creating 3D graphics in the browser.
+
+\`\`\`javascript
+import * as THREE from 'three';
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+\`\`\`
+
+## 2. Anime.js - Animation Library
+
+Create smooth and beautiful animations with Anime.js.
+
+\`\`\`javascript
+anime({
+  targets: '.element',
+  translateX: 250,
+  rotate: '1turn',
+  duration: 2000
+});
+\`\`\`
+
+## 3. Chart.js - Data Visualization
+
+Draw beautiful charts easily with Chart.js.
+
+\`\`\`javascript
+const ctx = document.getElementById('myChart');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3]
+    }]
+  }
+});
+\`\`\`
+
+## 4. Particles.js - Particle Effects
+
+Create beautiful particle effects for websites.
+
+## 5. AOS (Animate On Scroll)
+
+Add scroll animations easily.
+
+## 6. GSAP (GreenSock Animation Platform)
+
+Professional animation library with high performance.
+
+## 7. D3.js - Data-Driven Documents
+
+Powerful library for creating complex data visualizations.
+
+## 8. Moment.js / Day.js - Date Manipulation
+
+Easily handle and format dates.
+
+## 9. Lodash - Utility Library
+
+JavaScript utility toolkit with many helpful functions.
+
+## 10. Axios - HTTP Client
+
+Popular and easy-to-use HTTP client library.
+
+Explore and experiment with these libraries to make your projects more interesting!`,
+    tags: ["JavaScript", "Libraries", "Code"],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((post) => post.slug === slug)
 }
 
-export function getPostsBySeries(series: "java" | "javascript"): Post[] {
+export function getPostsBySeries(series: "java" | "javascript" | "sql" | "python" | "csharp" | "entertainment"): Post[] {
   return posts.filter((post) => post.series === series)
 }
 
 export function getAllPosts(): Post[] {
-  return posts
+  // Sort posts by date (newest first)
+  return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
 

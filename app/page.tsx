@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/about-section"
 import { ProjectsSection } from "@/components/projects-section"
 import { BlogSection } from "@/components/blog-section"
 import { CertificatesSection } from "@/components/certificates-section"
+import { ContactSection } from "@/components/contact-section"
 import { InteractiveParticles } from "@/components/interactive-particles"
 import { CursorTrail } from "@/components/cursor-trail"
 import { FloatingElements } from "@/components/floating-elements"
@@ -23,6 +24,7 @@ export default function Home() {
       <ProjectsSection />
       <BlogSection />
       <CertificatesSection />
+      <ContactSection />
       <Footer />
     </main>
   )

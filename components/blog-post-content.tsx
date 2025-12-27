@@ -51,10 +51,28 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
                 className={`px-3 py-1 rounded-full text-xs font-medium ${
                   post.series === "java"
                     ? "bg-blue-500/20 text-blue-600 dark:text-blue-400"
-                    : "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400"
+                    : post.series === "javascript"
+                    ? "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400"
+                    : post.series === "sql"
+                    ? "bg-green-500/20 text-green-600 dark:text-green-400"
+                    : post.series === "python"
+                    ? "bg-cyan-500/20 text-cyan-600 dark:text-cyan-400"
+                    : post.series === "csharp"
+                    ? "bg-purple-500/20 text-purple-600 dark:text-purple-400"
+                    : "bg-pink-500/20 text-pink-600 dark:text-pink-400"
                 }`}
               >
-                {post.series === "java" ? (t?.blog?.java || "Java") : (t?.blog?.javascript || "JavaScript")}
+                {post.series === "java"
+                  ? (t?.blog?.java || "Java")
+                  : post.series === "javascript"
+                  ? (t?.blog?.javascript || "JavaScript")
+                  : post.series === "sql"
+                  ? (t?.blog?.sql || "SQL")
+                  : post.series === "python"
+                  ? (t?.blog?.python || "Python")
+                  : post.series === "csharp"
+                  ? (t?.blog?.csharp || "C#")
+                  : (t?.blog?.entertainment || "Giải trí")}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
